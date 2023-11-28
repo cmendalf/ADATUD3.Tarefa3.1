@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 27 nov. 2023 16:49:51 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="clases.Empregado" table="empregado" catalog="empresa" optimistic-lock="version">
+        <id name="nss" type="string">
+            <column name="NSS" length="15" />
+            <generator class="assigned" />
+        </id>
+        <property name="nome" type="string">
+            <column name="Nome" length="25" not-null="true" />
+        </property>
+        <property name="apelido1" type="string">
+            <column name="Apelido1" length="25" not-null="true" />
+        </property>
+        <property name="apelido2" type="string">
+            <column name="Apelido2" length="25" />
+        </property>
+        <property name="salario" type="java.lang.Float">
+            <column name="Salario" precision="12" scale="0" />
+        </property>
+        <property name="dataNacemento" type="date">
+            <column name="DataNacemento" length="10" />
+        </property>
+        <property name="sexo" type="char">
+            <column name="Sexo" length="1" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
